@@ -1,0 +1,56 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:wm="clr-namespace:Winemonk.Wpf">
+    <Style x:Key="BaseButtonStyle" TargetType="Button">
+        <Setter Property="Margin" Value="3" />
+        <Setter Property="Background" Value="{StaticResource LightBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource ForegroundBrush}" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="BorderThickness" Value="0.9" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderColorBrush}" />
+        <Setter Property="Padding" Value="10,3" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="wm:ButtonExtensions.CornerRadius" Value="3" />
+    </Style>
+    <Style
+        x:Key="InfoButtonStyle"
+        BasedOn="{StaticResource BaseButtonStyle}"
+        TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource InfoBrush}" />
+        <Setter Property="wm:ButtonExtensions.HoverBackground" Value="{StaticResource InfoHoverBrush}" />
+        <Setter Property="wm:ButtonExtensions.PressBackground" Value="{StaticResource InfoPressedBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource LightBrush}" />
+        <Setter Property="BorderThickness" Value="0" />
+    </Style>
+    <Style
+        x:Key="WarningButtonStyle"
+        BasedOn="{StaticResource BaseButtonStyle}"
+        TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource WarningBrush}" />
+        <Setter Property="wm:ButtonExtensions.HoverBackground" Value="{StaticResource WarningHoverBrush}" />
+        <Setter Property="wm:ButtonExtensions.PressBackground" Value="{StaticResource WarningPressedBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource LightBrush}" />
+        <Setter Property="BorderThickness" Value="0" />
+    </Style>
+    <Style
+        x:Key="ErrorButtonStyle"
+        BasedOn="{StaticResource BaseButtonStyle}"
+        TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource ErrorBrush}" />
+        <Setter Property="wm:ButtonExtensions.HoverBackground" Value="{StaticResource ErrorHoverBrush}" />
+        <Setter Property="wm:ButtonExtensions.PressBackground" Value="{StaticResource ErrorPressedBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource LightBrush}" />
+        <Setter Property="BorderThickness" Value="0" />
+    </Style>
+    <Style
+        x:Key="SuccessButtonStyle"
+        BasedOn="{StaticResource BaseButtonStyle}"
+        TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource SuccessBrush}" />
+        <Setter Property="wm:ButtonExtensions.HoverBackground" Value="{StaticResource SuccessHoverBrush}" />
+        <Setter Property="wm:ButtonExtensions.PressBackground" Value="{StaticResource SuccessPressedBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource LightBrush}" />
+        <Setter Property="BorderThickness" Value="0" />
+    </Style>
+</ResourceDictionary>

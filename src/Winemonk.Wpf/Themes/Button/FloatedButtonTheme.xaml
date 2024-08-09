@@ -1,0 +1,39 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Winemonk.Wpf;component/Themes/Button/BaseButtonTheme.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Winemonk.Wpf;component/Themes/Button/FloatedButtonTemplate.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <Style BasedOn="{StaticResource BaseButtonStyle}" TargetType="Button">
+        <Setter Property="Template" Value="{StaticResource FloatedButtonTemplate}" />
+    </Style>
+    <Style
+        x:Key="DefaultFloatedButtonStyle"
+        BasedOn="{StaticResource BaseButtonStyle}"
+        TargetType="Button">
+        <Setter Property="Template" Value="{StaticResource FloatedButtonTemplate}" />
+    </Style>
+    <Style
+        x:Key="InfoFloatedButtonStyle"
+        BasedOn="{StaticResource InfoButtonStyle}"
+        TargetType="Button">
+        <Setter Property="Template" Value="{StaticResource FloatedButtonTemplate}" />
+    </Style>
+    <Style
+        x:Key="WarningFloatedButtonStyle"
+        BasedOn="{StaticResource WarningButtonStyle}"
+        TargetType="Button">
+        <Setter Property="Template" Value="{StaticResource FloatedButtonTemplate}" />
+    </Style>
+    <Style
+        x:Key="ErrorFloatedButtonStyle"
+        BasedOn="{StaticResource ErrorButtonStyle}"
+        TargetType="Button">
+        <Setter Property="Template" Value="{StaticResource FloatedButtonTemplate}" />
+    </Style>
+    <Style
+        x:Key="SuccessFloatedButtonStyle"
+        BasedOn="{StaticResource SuccessButtonStyle}"
+        TargetType="Button">
+        <Setter Property="Template" Value="{StaticResource FloatedButtonTemplate}" />
+    </Style>
+</ResourceDictionary>

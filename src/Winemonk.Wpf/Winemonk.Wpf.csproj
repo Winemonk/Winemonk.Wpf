@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\wm%4016.ico" />
+    <None Remove="Resources\wm%4016.png" />
+    <None Remove="Resources\wm%4032.ico" />
+    <None Remove="Resources\wm%4032.png" />
+    <None Remove="Resources\wm_h.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controls\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\wm@16.ico" />
+    <Resource Include="Resources\wm@16.png" />
+    <Resource Include="Resources\wm@32.ico" />
+    <Resource Include="Resources\wm@32.png" />
+    <Resource Include="Resources\wm_h.png" />
+  </ItemGroup>
+
+</Project>

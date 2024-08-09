@@ -1,0 +1,61 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:wm="clr-namespace:Winemonk.Wpf">
+    <ControlTemplate x:Key="FloatedButtonTemplate" TargetType="Button">
+        <Grid>
+            <Border
+                x:Name="border"
+                Margin="{TemplateBinding Margin}"
+                Padding="{TemplateBinding Padding}"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="3">
+                <Border.Effect>
+                    <DropShadowEffect
+                        x:Name="shadow"
+                        BlurRadius="15"
+                        Opacity="0.3"
+                        ShadowDepth="5"
+                        Color="{StaticResource BorderColor}" />
+                </Border.Effect>
+                <ContentPresenter
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Content="{TemplateBinding Content}" />
+            </Border>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsMouseCaptured}" Value="False" />
+                    <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsMouseOver}" Value="True" />
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetName="shadow"
+                                Storyboard.TargetProperty="Opacity"
+                                To="1"
+                                Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </MultiDataTrigger.EnterActions>
+                <MultiDataTrigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetName="shadow"
+                                Storyboard.TargetProperty="Opacity"
+                                To="0.3"
+                                Duration="0:0:0.05" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </MultiDataTrigger.ExitActions>
+            </MultiDataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+</ResourceDictionary>

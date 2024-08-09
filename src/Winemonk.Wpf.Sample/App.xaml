@@ -1,0 +1,17 @@
+﻿<prism:PrismApplication
+    x:Class="Winemonk.Wpf.Sample.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Winemonk.Wpf.Sample"
+    xmlns:prism="http://prismlibrary.com/">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--  引用 Colors.xaml  -->
+                <ResourceDictionary Source="pack://application:,,,/Winemonk.Wpf;component/Themes/Common/Colors.xaml" />
+                <!--  引用 Styles.xaml  -->
+                <ResourceDictionary Source="pack://application:,,,/Winemonk.Wpf;component/Themes/WinemonkTheme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</prism:PrismApplication>

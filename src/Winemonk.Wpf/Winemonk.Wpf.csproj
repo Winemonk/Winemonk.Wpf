@@ -16,10 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controls\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="Resources\wm@16.ico" />
     <Resource Include="Resources\wm@16.png" />
     <Resource Include="Resources\wm@32.ico" />

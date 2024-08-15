@@ -11,37 +11,56 @@
     prism:ViewModelLocator.AutoWireViewModel="True"
     mc:Ignorable="d">
     <UserControl.Resources>
+
+        <!--  转换器的资源定义  -->
+        <local:ProgressBarToArcConverter x:Key="ProgressBarToArcConverter" />
         <Style x:Key="CircularProgressBarStyle" TargetType="ProgressBar">
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ProgressBar">
                         <Grid>
-                            <Ellipse Stroke="Gray" StrokeThickness="10" />
+                            <!--  背景圆  -->
+                            <Ellipse
+                                Width="100"
+                                Height="100"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Stroke="#ddd"
+                                StrokeThickness="10" />
+
+                            <!--  进度条的圆弧  -->
                             <Path
-                                Name="PART_Indicator"
-                                Data="M 50,0 A 50,50 0 1 1 0,-50"
+                                Name="PART_ProgressBar"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
                                 RenderTransformOrigin="0.5,0.5"
-                                Stroke="Green"
+                                Stroke="Blue"
                                 StrokeThickness="10">
                                 <Path.RenderTransform>
-                                    <RotateTransform Angle="0" />
+                                    <RotateTransform Angle="-90" />
                                 </Path.RenderTransform>
                             </Path>
                         </Grid>
                         <ControlTemplate.Triggers>
-                            <Trigger Property="Value" Value="0">
-                                <Setter TargetName="PART_Indicator" Property="StrokeThickness" Value="0" />
-                            </Trigger>
-                            <Trigger Property="Value" Value="100">
-                                <Setter TargetName="PART_Indicator" Property="StrokeThickness" Value="10" />
+                            <Trigger Property="IsIndeterminate" Value="False">
+                                <Setter TargetName="PART_ProgressBar" Property="Data">
+                                    <Setter.Value>
+                                        <MultiBinding Converter="{StaticResource ProgressBarToArcConverter}">
+                                            <Binding Path="Value" RelativeSource="{RelativeSource TemplatedParent}" />
+                                            <Binding Path="Maximum" RelativeSource="{RelativeSource TemplatedParent}" />
+                                            <Binding Path="ActualHeight" RelativeSource="{RelativeSource TemplatedParent}" />
+                                        </MultiBinding>
+                                    </Setter.Value>
+                                </Setter>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
+
     </UserControl.Resources>
-    <Grid>
+    <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition />

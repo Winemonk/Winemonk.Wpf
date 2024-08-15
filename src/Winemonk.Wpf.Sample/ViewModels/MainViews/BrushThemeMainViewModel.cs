@@ -19,16 +19,17 @@ namespace Winemonk.Wpf.Sample.ViewModels.MainViews
         {
             var resourceDictionary = new ResourceDictionary
             {
-                Source = new Uri("pack://application:,,,/Winemonk.Wpf;component/Themes/Common/Colors.xaml")
+                Source = new Uri("pack://application:,,,/Winemonk.Wpf;component/Themes/Basic/Brush.xaml")
             };
-            //Dictionary<string, Brush> brushes = new Dictionary<string, Brush>();
+            SortedDictionary<string, Brush> brushes = new SortedDictionary<string, Brush>();
             foreach (DictionaryEntry item in resourceDictionary)
             {
                 if (item.Value is Brush brush)
                 {
-                    _brushes.Add(item.Key.ToString(), brush);
+                    brushes.Add(item.Key.ToString(), brush);
                 }
             }
+            _brushes = new Dictionary<string, Brush>(brushes);
         }
     }
 }

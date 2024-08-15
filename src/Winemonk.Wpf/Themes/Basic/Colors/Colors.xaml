@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Color x:Key="LightInfoColor">#5a8ef6</Color>
+    <Color x:Key="InfoColor">#326cf3</Color>
+    <Color x:Key="MiddleInfoColor">#2A5ED9</Color>
+    <Color x:Key="DarkInfoColor">#1A3CA5</Color>
+    <Color x:Key="LightWarningColor">#ffcc00</Color>
+    <Color x:Key="WarningColor">#FFA000</Color>
+    <Color x:Key="MiddleWarningColor">#FF8800</Color>
+    <Color x:Key="DarkWarningColor">#FF6600</Color>
+    <Color x:Key="LightErrorColor">#ff2222</Color>
+    <Color x:Key="ErrorColor">#E51111</Color>
+    <Color x:Key="MiddleErrorColor">#CC0303</Color>
+    <Color x:Key="DarkErrorColor">#AA0000</Color>
+    <Color x:Key="LightSuccessColor">#22cc22</Color>
+    <Color x:Key="SuccessColor">#1FA31F</Color>
+    <Color x:Key="MiddleSuccessColor">#168416</Color>
+    <Color x:Key="DarkSuccessColor">#106610</Color>
+
+    <Color x:Key="BackgroundColor">#FFFFFF</Color>
+    <Color x:Key="HoveredBackgroundColor">#D5D5D5</Color>
+    <Color x:Key="PressedBackgroundColor">#B5B5B5</Color>
+    <Color x:Key="DarkBackgroundColor">#303030</Color>
+    <Color x:Key="DarkHoveredBackgroundColor">#202020</Color>
+    <Color x:Key="DarkPressedBackgroundColor">#101010</Color>
+    <Color x:Key="RegionColor">#E5E5E5</Color>
+    <Color x:Key="DarkRegionColor">#303030</Color>
+    <Color x:Key="ForegroundColor">#101010</Color>
+    <Color x:Key="LightForegroundColor">#FFFFFF</Color>
+    <Color x:Key="BorderColor">#757575</Color>
+
+    <Color x:Key="PrimaryColor">#007BFF</Color>
+    <Color x:Key="SecondaryColor">#0056b3</Color>
+    <Color x:Key="TertiaryColor">#003366</Color>
+    <Color x:Key="QuaternaryColor">#001933</Color>
+</ResourceDictionary>

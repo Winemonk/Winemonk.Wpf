@@ -9,6 +9,7 @@
     Title="Winemonk"
     Width="800"
     Height="450"
+    Background="{DynamicResource BackgroundBrush}"
     Icon="pack://application:,,,/Winemonk.Wpf;component/Resources/wm@16.ico"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
@@ -19,13 +20,13 @@
                     <ControlTemplate TargetType="ContentControl">
                         <Border
                             Margin="5"
-                            Background="#cceaeaea"
+                            Background="{DynamicResource RegionBrush}"
                             CornerRadius="10">
                             <Border.Effect>
                                 <DropShadowEffect
                                     Opacity="0.3"
                                     ShadowDepth="5"
-                                    Color="#888888" />
+                                    Color="{DynamicResource DarkRegionColor}" />
                             </Border.Effect>
                             <ContentPresenter />
                         </Border>

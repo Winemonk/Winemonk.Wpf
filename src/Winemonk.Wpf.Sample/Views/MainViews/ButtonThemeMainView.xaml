@@ -5,62 +5,212 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Winemonk.Wpf.Sample.Views.MainViews"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:wm="clr-namespace:Winemonk.Wpf;assembly=Winemonk.Wpf"
+    xmlns:wwe="clr-namespace:Winemonk.Wpf.Extenstions;assembly=Winemonk.Wpf"
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
-    <Grid>
+    <Grid Margin="10">
         <StackPanel Orientation="Vertical">
-            <WrapPanel>
-                <Button Content="Hello World" Style="{StaticResource DefaultFloatedButtonStyle}" />
-                <Button Content="Hello World" Style="{StaticResource InfoFloatedButtonStyle}" />
-                <Button Content="Hello World" Style="{StaticResource WarningFloatedButtonStyle}" />
-                <Button Content="Hello World" Style="{StaticResource ErrorFloatedButtonStyle}" />
-                <Button Content="Hello World" Style="{StaticResource SuccessFloatedButtonStyle}" />
-            </WrapPanel>
-            <WrapPanel>
-                <Button Content="Hello World" Style="{StaticResource DefaultGradientButtonStyle}" />
-                <Button Content="Hello World" Style="{StaticResource InfoGradientButtonStyle}" />
-                <Button Content="Hello World" Style="{StaticResource WarningGradientButtonStyle}" />
-                <Button Content="Hello World" Style="{StaticResource ErrorGradientButtonStyle}" />
-                <Button Content="Hello World" Style="{StaticResource SuccessGradientButtonStyle}" />
-            </WrapPanel>
-            <WrapPanel>
-                <Button Content="Hello World" Style="{StaticResource DefaultFloatedShakeButtonStyle}" />
-                <Button Content="Hello World" Style="{StaticResource InfoFloatedShakeButtonStyle}" />
-                <Button Content="Hello World" Style="{StaticResource WarningFloatedShakeButtonStyle}" />
-                <Button Content="Hello World" Style="{StaticResource ErrorFloatedShakeButtonStyle}" />
-                <Button Content="Hello World" Style="{StaticResource SuccessFloatedShakeButtonStyle}" />
-            </WrapPanel>
-            <WrapPanel>
-                <Button Content="Hello World" Style="{StaticResource DefaultGradientShakeButtonStyle}" />
-                <Button Content="Hello World" Style="{StaticResource InfoGradientShakeButtonStyle}" />
-                <Button Content="Hello World" Style="{StaticResource WarningGradientShakeButtonStyle}" />
-                <Button Content="Hello World" Style="{StaticResource ErrorGradientShakeButtonStyle}" />
-                <Button Content="Hello World" Style="{StaticResource SuccessGradientShakeButtonStyle}" />
-            </WrapPanel>
-            <WrapPanel>
-                <Button
-                    wm:FrameworkElementExtensions.IsShake="True"
-                    Content="Hello World"
-                    Style="{StaticResource DefaultGradientButtonStyle}" />
-                <Button
-                    wm:FrameworkElementExtensions.IsShake="True"
-                    Content="Hello World"
-                    Style="{StaticResource InfoGradientButtonStyle}" />
-                <Button
-                    wm:FrameworkElementExtensions.IsShake="True"
-                    Content="Hello World"
-                    Style="{StaticResource WarningGradientButtonStyle}" />
-                <Button
-                    wm:FrameworkElementExtensions.IsShake="True"
-                    Content="Hello World"
-                    Style="{StaticResource ErrorGradientButtonStyle}" />
-                <Button
-                    wm:FrameworkElementExtensions.IsShake="True"
-                    Content="Hello World"
-                    Style="{StaticResource SuccessGradientButtonStyle}" />
-            </WrapPanel>
+            <GroupBox Header="基本按钮">
+                <StackPanel Orientation="Vertical">
+                    <WrapPanel>
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="0"
+                            wwe:GradientExtensions.IsGradable="True"
+                            Content="Hello World"
+                            Style="{StaticResource LightButtonStyle}" />
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="3"
+                            wwe:GradientExtensions.IsGradable="True"
+                            Content="Hello World"
+                            Style="{StaticResource InfoButtonStyle}" />
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="6"
+                            wwe:GradientExtensions.IsGradable="True"
+                            Content="Hello World"
+                            Style="{StaticResource WarningButtonStyle}" />
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="9"
+                            wwe:GradientExtensions.IsGradable="True"
+                            Content="Hello World"
+                            Style="{StaticResource ErrorButtonStyle}" />
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="12"
+                            wwe:GradientExtensions.IsGradable="True"
+                            Content="Hello World"
+                            Style="{StaticResource SuccessButtonStyle}" />
+                    </WrapPanel>
+                    <WrapPanel>
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="0"
+                            wwe:GradientExtensions.IsGradable="True"
+                            Content="Hello World"
+                            Style="{StaticResource DarkButtonStyle}" />
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="3"
+                            wwe:GradientExtensions.IsGradable="True"
+                            Content="Hello World"
+                            Style="{StaticResource DarkInfoButtonStyle}" />
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="6"
+                            wwe:GradientExtensions.IsGradable="True"
+                            Content="Hello World"
+                            Style="{StaticResource DarkWarningButtonStyle}" />
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="9"
+                            wwe:GradientExtensions.IsGradable="True"
+                            Content="Hello World"
+                            Style="{StaticResource DarkErrorButtonStyle}" />
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="12"
+                            wwe:GradientExtensions.IsGradable="True"
+                            Content="Hello World"
+                            Style="{StaticResource DarkSuccessButtonStyle}" />
+                    </WrapPanel>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Margin="0,20,0,0" Header="动画按钮">
+                <StackPanel Orientation="Vertical">
+                    <WrapPanel>
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="0"
+                            wwe:ShakeExtensions.IsShakeable="True"
+                            wwe:ShakeExtensions.ShakeDuration="0.05"
+                            wwe:ShakeExtensions.ShakeMode="Horizontal"
+                            wwe:ShakeExtensions.ShakeRange="1"
+                            Content="Hello World"
+                            Style="{StaticResource LightButtonStyle}" />
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="3"
+                            wwe:GradientExtensions.IsGradable="True"
+                            wwe:ShakeExtensions.IsShakeable="True"
+                            wwe:ShakeExtensions.ShakeDuration="0.075"
+                            wwe:ShakeExtensions.ShakeMode="Horizontal"
+                            wwe:ShakeExtensions.ShakeRange="2"
+                            Content="Hello World"
+                            Style="{StaticResource InfoButtonStyle}" />
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="6"
+                            wwe:GradientExtensions.IsGradable="True"
+                            wwe:ShakeExtensions.IsShakeable="True"
+                            wwe:ShakeExtensions.ShakeDuration="0.1"
+                            wwe:ShakeExtensions.ShakeMode="Horizontal"
+                            wwe:ShakeExtensions.ShakeRange="3"
+                            Content="Hello World"
+                            Style="{StaticResource WarningButtonStyle}" />
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="9"
+                            wwe:GradientExtensions.IsGradable="True"
+                            wwe:ShakeExtensions.IsShakeable="True"
+                            wwe:ShakeExtensions.ShakeDuration="0.125"
+                            wwe:ShakeExtensions.ShakeMode="Horizontal"
+                            wwe:ShakeExtensions.ShakeRange="4"
+                            Content="Hello World"
+                            Style="{StaticResource ErrorButtonStyle}" />
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="12"
+                            wwe:GradientExtensions.IsGradable="True"
+                            wwe:ShakeExtensions.IsShakeable="True"
+                            wwe:ShakeExtensions.ShakeDuration="0.15"
+                            wwe:ShakeExtensions.ShakeMode="Horizontal"
+                            wwe:ShakeExtensions.ShakeRange="5"
+                            Content="Hello World"
+                            Style="{StaticResource SuccessButtonStyle}" />
+                    </WrapPanel>
+                    <WrapPanel>
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="0"
+                            wwe:ShakeExtensions.IsShakeable="True"
+                            wwe:ShakeExtensions.ShakeDuration="0.05"
+                            wwe:ShakeExtensions.ShakeMode="Vertical"
+                            wwe:ShakeExtensions.ShakeRange="1"
+                            Content="Hello World"
+                            Style="{StaticResource DarkButtonStyle}" />
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="3"
+                            wwe:GradientExtensions.IsGradable="True"
+                            wwe:ShakeExtensions.IsShakeable="True"
+                            wwe:ShakeExtensions.ShakeDuration="0.075"
+                            wwe:ShakeExtensions.ShakeMode="Vertical"
+                            wwe:ShakeExtensions.ShakeRange="2"
+                            Content="Hello World"
+                            Style="{StaticResource DarkInfoButtonStyle}" />
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="6"
+                            wwe:GradientExtensions.IsGradable="True"
+                            wwe:ShakeExtensions.IsShakeable="True"
+                            wwe:ShakeExtensions.ShakeDuration="0.1"
+                            wwe:ShakeExtensions.ShakeMode="Vertical"
+                            wwe:ShakeExtensions.ShakeRange="3"
+                            Content="Hello World"
+                            Style="{StaticResource DarkWarningButtonStyle}" />
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="9"
+                            wwe:GradientExtensions.IsGradable="True"
+                            wwe:ShakeExtensions.IsShakeable="True"
+                            wwe:ShakeExtensions.ShakeDuration="0.125"
+                            wwe:ShakeExtensions.ShakeMode="Vertical"
+                            wwe:ShakeExtensions.ShakeRange="4"
+                            Content="Hello World"
+                            Style="{StaticResource DarkErrorButtonStyle}" />
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="12"
+                            wwe:GradientExtensions.IsGradable="True"
+                            wwe:ShakeExtensions.IsShakeable="True"
+                            wwe:ShakeExtensions.ShakeDuration="0.15"
+                            wwe:ShakeExtensions.ShakeMode="Vertical"
+                            wwe:ShakeExtensions.ShakeRange="5"
+                            Content="Hello World"
+                            Style="{StaticResource DarkSuccessButtonStyle}" />
+                    </WrapPanel>
+                    <WrapPanel>
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="0"
+                            wwe:ShakeExtensions.IsShakeable="True"
+                            wwe:ShakeExtensions.ShakeAngle="5"
+                            wwe:ShakeExtensions.ShakeDuration="0.05"
+                            wwe:ShakeExtensions.ShakeMode="Rotate"
+                            Content="Hello World"
+                            Style="{StaticResource LightButtonStyle}" />
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="3"
+                            wwe:GradientExtensions.IsGradable="True"
+                            wwe:ShakeExtensions.IsShakeable="True"
+                            wwe:ShakeExtensions.ShakeAngle="7"
+                            wwe:ShakeExtensions.ShakeDuration="0.075"
+                            wwe:ShakeExtensions.ShakeMode="Rotate"
+                            Content="Hello World"
+                            Style="{StaticResource InfoButtonStyle}" />
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="6"
+                            wwe:GradientExtensions.IsGradable="True"
+                            wwe:ShakeExtensions.IsShakeable="True"
+                            wwe:ShakeExtensions.ShakeAngle="9"
+                            wwe:ShakeExtensions.ShakeDuration="0.1"
+                            wwe:ShakeExtensions.ShakeMode="Rotate"
+                            Content="Hello World"
+                            Style="{StaticResource WarningButtonStyle}" />
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="9"
+                            wwe:GradientExtensions.IsGradable="True"
+                            wwe:ShakeExtensions.IsShakeable="True"
+                            wwe:ShakeExtensions.ShakeAngle="11"
+                            wwe:ShakeExtensions.ShakeDuration="0.125"
+                            wwe:ShakeExtensions.ShakeMode="Rotate"
+                            Content="Hello World"
+                            Style="{StaticResource ErrorButtonStyle}" />
+                        <Button
+                            wwe:ButtonExtensions.CornerRadius="12"
+                            wwe:GradientExtensions.IsGradable="True"
+                            wwe:ShakeExtensions.IsShakeable="True"
+                            wwe:ShakeExtensions.ShakeAngle="13"
+                            wwe:ShakeExtensions.ShakeDuration="0.15"
+                            wwe:ShakeExtensions.ShakeMode="Rotate"
+                            Content="Hello World"
+                            Style="{StaticResource SuccessButtonStyle}" />
+                    </WrapPanel>
+                </StackPanel>
+            </GroupBox>
         </StackPanel>
     </Grid>
 </UserControl>

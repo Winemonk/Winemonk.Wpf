@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="LightInfoBrush" Color="{StaticResource LightInfoColor}" />
+    <SolidColorBrush x:Key="InfoBrush" Color="{StaticResource InfoColor}" />
+    <SolidColorBrush x:Key="MiddleInfoBrush" Color="{StaticResource MiddleInfoColor}" />
+    <SolidColorBrush x:Key="DarkInfoBrush" Color="{StaticResource DarkInfoColor}" />
+    <SolidColorBrush x:Key="LightWarningBrush" Color="{StaticResource LightWarningColor}" />
+    <SolidColorBrush x:Key="WarningBrush" Color="{StaticResource WarningColor}" />
+    <SolidColorBrush x:Key="MiddleWarningBrush" Color="{StaticResource MiddleWarningColor}" />
+    <SolidColorBrush x:Key="DarkWarningBrush" Color="{StaticResource DarkWarningColor}" />
+    <SolidColorBrush x:Key="LightErrorBrush" Color="{StaticResource LightErrorColor}" />
+    <SolidColorBrush x:Key="ErrorBrush" Color="{StaticResource ErrorColor}" />
+    <SolidColorBrush x:Key="MiddleErrorBrush" Color="{StaticResource MiddleErrorColor}" />
+    <SolidColorBrush x:Key="DarkErrorBrush" Color="{StaticResource DarkErrorColor}" />
+    <SolidColorBrush x:Key="LightSuccessBrush" Color="{StaticResource LightSuccessColor}" />
+    <SolidColorBrush x:Key="SuccessBrush" Color="{StaticResource SuccessColor}" />
+    <SolidColorBrush x:Key="MiddleSuccessBrush" Color="{StaticResource MiddleSuccessColor}" />
+    <SolidColorBrush x:Key="DarkSuccessBrush" Color="{StaticResource DarkSuccessColor}" />
+
+    <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource BackgroundColor}" />
+    <SolidColorBrush x:Key="HoveredBackgroundBrush" Color="{StaticResource HoveredBackgroundColor}" />
+    <SolidColorBrush x:Key="PressedBackgroundBrush" Color="{StaticResource PressedBackgroundColor}" />
+    <SolidColorBrush x:Key="DarkBackgroundBrush" Color="{StaticResource DarkBackgroundColor}" />
+    <SolidColorBrush x:Key="DarkHoveredBackgroundBrush" Color="{StaticResource DarkHoveredBackgroundColor}" />
+    <SolidColorBrush x:Key="DarkPressedBackgroundBrush" Color="{StaticResource DarkPressedBackgroundColor}" />
+    <SolidColorBrush x:Key="RegionBrush" Color="{StaticResource RegionColor}" />
+    <SolidColorBrush x:Key="DarkRegionBrush" Color="{StaticResource DarkRegionColor}" />
+    <SolidColorBrush x:Key="ForegroundBrush" Color="{StaticResource ForegroundColor}" />
+    <SolidColorBrush x:Key="LightForegroundBrush" Color="{StaticResource LightForegroundColor}" />
+    <SolidColorBrush x:Key="BorderBrush" Color="{StaticResource BorderColor}" />
+
+    <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}" />
+    <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource SecondaryColor}" />
+    <SolidColorBrush x:Key="TertiaryBrush" Color="{StaticResource TertiaryColor}" />
+    <SolidColorBrush x:Key="QuaternaryBrush" Color="{StaticResource QuaternaryColor}" />
+</ResourceDictionary>

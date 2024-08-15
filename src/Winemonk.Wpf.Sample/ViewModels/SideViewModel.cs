@@ -34,7 +34,6 @@ namespace Winemonk.Wpf.Sample.ViewModels
 
         public SideViewModel(IRegionManager regionManager)
         {
-
             _regionManager = regionManager;
         }
 

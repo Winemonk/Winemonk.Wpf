@@ -7,8 +7,11 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <!--<ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/Theme.xaml" />-->
+
                 <!--  引用 Colors.xaml  -->
-                <ResourceDictionary Source="pack://application:,,,/Winemonk.Wpf;component/Themes/Common/Colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Winemonk.Wpf;component/Themes/Basic/Colors/Colors.xaml" />
                 <!--  引用 Styles.xaml  -->
                 <ResourceDictionary Source="pack://application:,,,/Winemonk.Wpf;component/Themes/WinemonkTheme.xaml" />
             </ResourceDictionary.MergedDictionaries>

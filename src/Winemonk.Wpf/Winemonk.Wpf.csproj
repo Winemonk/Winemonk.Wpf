@@ -1,26 +1,37 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
-    <UseWPF>true</UseWPF>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>net35;net40;net45;net46;net461;net462;net47;net471;net472;net48;net481;netcoreapp3.0;netcoreapp3.1;net5.0-windows;net6.0-windows;net7.0-windows;net8.0-windows</TargetFrameworks>
+		<UseWPF>true</UseWPF>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Title>$(AssemblyName)</Title>
+		<Authors>Winemonk</Authors>
+		<Company>$(Authors)</Company>
+		<Description>Winemonk WPF UI Framework</Description>
+		<PackageProjectUrl>https://github.com/WineMonk/Winemonk.Wpf</PackageProjectUrl>
+		<ApplicationIcon>wm@256.ico</ApplicationIcon>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<Copyright>©2025 By Winemonk</Copyright>
+		<RepositoryUrl>https://github.com/WineMonk/Hearth.ArcGIS.Samples</RepositoryUrl>
+		<PackageTags>winemonk;wpf;ui;framework</PackageTags>
+		<PackageIcon>wm@128.png</PackageIcon>
+		<AssemblyVersion>1.0.1</AssemblyVersion>
+		<FileVersion>1.0.1</FileVersion>
+		<Version>1.0.1</Version>
 
-  <ItemGroup>
-    <None Remove="Resources\wm%4016.ico" />
-    <None Remove="Resources\wm%4016.png" />
-    <None Remove="Resources\wm%4032.ico" />
-    <None Remove="Resources\wm%4032.png" />
-    <None Remove="Resources\wm_h.png" />
-  </ItemGroup>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Resource Include="Resources\wm@16.ico" />
-    <Resource Include="Resources\wm@16.png" />
-    <Resource Include="Resources\wm@32.ico" />
-    <Resource Include="Resources\wm@32.png" />
-    <Resource Include="Resources\wm_h.png" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Remove="wm%40128.png" />
+		<None Remove="wm%40256.ico" />
+	</ItemGroup>
 
+	<ItemGroup>
+		<Content Include="wm@256.ico" />
+		<Content Include="wm@128.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</Content>
+	</ItemGroup>
 </Project>

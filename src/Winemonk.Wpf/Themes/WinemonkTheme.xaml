@@ -1,8 +1,7 @@
 ﻿<ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:wm="https://github.com/WineMonk/Winemonk.Wpf">
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/Winemonk.Wpf;component/Themes/Styles/ButtonStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Winemonk.Wpf;component/Themes/Basic/Colors/Colors.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

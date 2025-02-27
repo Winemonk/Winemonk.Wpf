@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System;
+using System.Linq;
+using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using Winemonk.Wpf.Enums;
@@ -6,9 +8,9 @@ using Winemonk.Wpf.Extenstions;
 
 namespace Winemonk.Wpf.Helpers
 {
-    public class ShakeHelper
+    internal class ShakeHelper
     {
-        public static void SetShake(FrameworkElement element)
+        internal static void SetShake(FrameworkElement element)
         {
             ShakeMode shakeMode = (ShakeMode)element.GetValue(ShakeExtensions.ShakeModeProperty);
             double shakeDuration = (double)element.GetValue(ShakeExtensions.ShakeDurationProperty);
@@ -137,7 +139,7 @@ namespace Winemonk.Wpf.Helpers
                 element.RenderTransform = translateTransform;
             }
             Style style = new Style(element.GetType(), element.Style);
-            TriggerBase? tgr = style.Triggers.FirstOrDefault(t => t.EnterActions.Any(a => a is BeginStoryboard bs && bs.Name == "WMShakeStoryboard"));
+            TriggerBase tgr = style.Triggers.FirstOrDefault(t => t.EnterActions.Any(a => a is BeginStoryboard bs && bs.Name == "WMShakeStoryboard"));
             style.Triggers.Remove(tgr);
             style.Triggers.Add(shakeTrigger);
             element.Style = style;

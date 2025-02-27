@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
@@ -6,9 +7,12 @@ using Winemonk.Wpf.Extenstions;
 
 namespace Winemonk.Wpf.Helpers
 {
-    public class GradientHelper
+    /// <summary>
+    /// 渐变效果帮助类
+    /// </summary>
+    internal class GradientHelper
     {
-        public static void InitGradientStoryboard(Control control)
+        internal static void InitGradientStoryboard(Control control)
         {
             Brush background = (Brush)control.GetValue(Control.BackgroundProperty);
             Brush hoveredBackground = (Brush)control.GetValue(GradientExtensions.HoveredBackgroundProperty);
@@ -46,6 +50,7 @@ namespace Winemonk.Wpf.Helpers
                 }
             };
         }
+
         private static void BeginStoryboard(object s, DependencyProperty storyboardProperty)
         {
             Control ctrl = (Control)s;
@@ -56,7 +61,8 @@ namespace Winemonk.Wpf.Helpers
                 storyboard?.Begin();
             }
         }
-        public static Storyboard GetStoryboard(Control control, Brush background, double gradientSpeed)
+
+        internal static Storyboard GetStoryboard(Control control, Brush background, double gradientSpeed)
         {
             Storyboard storyboard = new Storyboard();
             if (background is SolidColorBrush solidColorBrush)
@@ -89,7 +95,8 @@ namespace Winemonk.Wpf.Helpers
 
             return storyboard;
         }
-        public static void ChangeStoryboard(Control control, DependencyProperty storyboardProperty, Brush? background = null, double? gradientSpeed = null)
+
+        internal static void ChangeStoryboard(Control control, DependencyProperty storyboardProperty, Brush background = null, double? gradientSpeed = null)
         {
             if (background == null && gradientSpeed == null)
             {
